@@ -56,6 +56,30 @@ app.get('/test', async (req, res) => {
   }
 })
 
+app.get('/rain', async (req, res) => {
+  try {
+    res.send(tempDB.get("rain").values())
+
+
+  } catch (err) {
+    console.log(err);
+    res.send("Error" + err);
+  }
+})
+
+
+app.get('/rain/:id', async (req, res) => {
+  try {
+    res.send(tempDB.get("rain").filter({id: req.params.id}))
+
+
+  } catch (err) {
+    console.log(err);
+    res.send("Error" + err);
+  }
+})
+
+
 app.get("/incidents", (req, res) => {
   res.send(tempDB.get("incidents").value().reverse())
 })
