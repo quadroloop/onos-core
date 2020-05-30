@@ -5,10 +5,10 @@
 		"bounds": {
 			"start_point": {
 				"latitude": "14.9",
-				"longitude": "14.7"
+				"longitude": "121.9"
 			},
 			"end_point": {
-				"latitude": "121.9",
+				"latitude": "14.7",
 				"longitude": "122.1"
 			}
 		},
@@ -3629,10 +3629,10 @@
 		"bounds": {
 			"start_point": {
 				"latitude": "13.8",
-				"longitude": "13.6"
+				"longitude": "123.1"
 			},
 			"end_point": {
-				"latitude": "123.1",
+				"latitude": "13.6",
 				"longitude": "123.5"
 			}
 		},
@@ -7253,10 +7253,10 @@
 		"bounds": {
 			"start_point": {
 				"latitude": "13.2",
-				"longitude": "12.7"
+				"longitude": "122.9"
 			},
 			"end_point": {
-				"latitude": "122.9",
+				"latitude": "12.7",
 				"longitude": "123.5"
 			}
 		},
@@ -10877,10 +10877,10 @@
 		"bounds": {
 			"start_point": {
 				"latitude": "12.6",
-				"longitude": "12.4"
+				"longitude": "124.6"
 			},
 			"end_point": {
-				"latitude": "124.6",
+				"latitude": "12.4",
 				"longitude": "124.8"
 			}
 		},
@@ -14501,10 +14501,10 @@
 		"bounds": {
 			"start_point": {
 				"latitude": "12.3",
-				"longitude": "12.2"
+				"longitude": "125.5"
 			},
 			"end_point": {
-				"latitude": "125.5",
+				"latitude": "12.2",
 				"longitude": "125.6"
 			}
 		},
