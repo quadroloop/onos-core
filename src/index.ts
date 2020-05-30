@@ -74,7 +74,7 @@ app.get('/rain', async (req, res) => {
 
 app.get('/rain/:id', async (req, res) => {
   try {
-    res.send(tempDB.get("rain").filter({ id: req.params.id }))
+    res.send(tempDB.get("rain").filter({id: req.params.id}))
   } catch (err) {
     console.log(err);
     res.send("Error" + err);
