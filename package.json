@@ -7,10 +7,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-<<<<<<< HEAD
-=======
     "got": "^11.1.4",
->>>>>>> 6743c9ff14409f977fa2328c8425c596cd6a2e8e
     "lowdb": "^1.0.0",
     "moment": "^2.25.3",
     "pg": "^7.15.1",
@@ -18,11 +15,7 @@
     "socket.io": "^2.2.0"
   },
   "name": "core",
-<<<<<<< HEAD
-  "description": "SagiPinas Core",
-=======
   "description": "Onos Core",
->>>>>>> 6743c9ff14409f977fa2328c8425c596cd6a2e8e
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
@@ -39,22 +32,12 @@
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
-    "url": "git+https://github.com/quadroloop/hybrid-theory-core"
-=======
     "url": "git+https://github.com/quadroloop/onos-core"
->>>>>>> 6743c9ff14409f977fa2328c8425c596cd6a2e8e
   },
   "author": "Bryce Mercines",
   "license": "ISC",
   "bugs": {
-<<<<<<< HEAD
-    "url": "https://github.com/SagiPinas/core/issues"
-  },
-  "homepage": "https://sagipinas.now.sh"
-=======
     "url": "https://github.com/quadroloop/onos-core/issues"
   },
   "homepage": "https://onos.now.sh"
->>>>>>> 6743c9ff14409f977fa2328c8425c596cd6a2e8e
 }
