@@ -74,7 +74,7 @@ app.get('/rain', async (req, res) => {
 
 app.get('/rain/:id', async (req, res) => {
   try {
-    res.send(tempDB.get("rain").filter({id: req.params.id}))
+    res.send(tempDB.get("rain").filter({ id: req.params.id }))
   } catch (err) {
     console.log(err);
     res.send("Error" + err);
@@ -127,6 +127,28 @@ app.get("/events", (req, res) => {
     })
 
 })
+
+app.get("/places/nearby", (req, res) => {
+  if (req.query.keywords && req.query.location) {
+    axios.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json`, {
+      params: {
+        location: req.query.location,
+        rankby: "distance",
+        type: "establishment",
+        keyword: req.query.keywords,
+        key: googleMapsAPIKEY
+      }
+    })
+      .then(response => {
+        res.send(response.data)
+      })
+  } else {
+    res.send("Incomplete parameters!")
+  }
+
+})
+
+
 
 app.post("/login", (req, res) => {
 
@@ -806,6 +828,11 @@ io.sockets.on('connection', function (socket) {
   })
 
   // the list of socket events below are for testing purposes only
+
+
+
+
+
 
   socket.on("test_report_data", (data) => {
     console.log("=================")
