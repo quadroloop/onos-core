@@ -1,5 +1,5 @@
 let message = {
-  "welcomeGreeting": "Hello! thank you for reaching out to SagiPinas what can we help you with?",
+  "welcomeGreeting": "Hello! thank you for reaching out to Onos what can we help you with?",
   "askLocation": "It appears that you still haven't sent your location after requesting for nearest evacuation areas, you can cancel this action if you want.",
   "getLocation": "Lastly please send us your location, so that we can easily find you and send the appropriate rescue autorities",
   "incompleteReport": "Your incident report is still incomplete, you can continue, or cancel this report",
@@ -11,7 +11,7 @@ let message = {
   "getDetails": "Got it!, please describe your situation, condition, place, name and other things that could help us assess your situation, please keep calm and take your time: (Your next message will be considered as your response to this question)",
   "getSpecification": "Okay, please describe your emergency, so we can assess your situation, please keep calm and take your time: (Your next message will be considered as your response to this question)",
   "gotLocation": "Got it! , we recieved your report. we will notify you here, AS SOON AS POSSIBLE once your report is verified. Please stay safe for the mean time.",
-  "reportVerified": "Your Report has been verfied! rescue authorities has been contacted and are on their way to your location, thank you for using SagiPinas! :)",
+  "reportVerified": "Your Report has been verfied! rescue authorities has been contacted and are on their way to your location, thank you for using Onos! :)",
   "stayOnline": "If you can, please stay on the online you can message us to get more information about your location. :)",
   "cancelLocation": "Cancelled Location Sharing.",
   "goAhead": "Go Ahead! :) your next message will be considered as your emergency concern!",
