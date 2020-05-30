@@ -8,6 +8,7 @@ const bcrypt = require('bcrypt');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
+const forecastsRouter = require('./routes/forecasts.route')
 
 import moment from 'moment'
 
@@ -24,7 +25,7 @@ app.use(cors())
 http.listen(port);
 
 console.log(`===============================`)
-console.log(`SagiPinas Core API ${port}`)
+console.log(`Onos Core API ${port}`)
 console.log(`===============================`)
 
 const googleMapsAPIKEY = "AIzaSyD5kFZMwUIUDZ25nTtLx0_0G3x1d2GMiCY";
@@ -38,10 +39,12 @@ import db from './db';
 
 app.get("/", (req, res) => {
   res.send({
-    message: "SagiPinas Core v. 1.0",
+    message: "Onos Core v. 1.0",
     status: "running"
   })
 })
+
+app.use('/forecasts', forecastsRouter);
 
 app.get('/test', async (req, res) => {
   try {
