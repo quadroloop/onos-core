@@ -59,6 +59,52 @@ app.get('/test', async (req, res) => {
   }
 })
 
+app.get('/rain', async (req, res) => {
+  try {
+    res.send(tempDB.get("rain").values())
+
+
+  } catch (err) {
+    console.log(err);
+    res.send("Error" + err);
+  }
+})
+
+
+
+app.get('/rain/:id', async (req, res) => {
+  try {
+    res.send(tempDB.get("rain").filter({id: req.params.id}))
+  } catch (err) {
+    console.log(err);
+    res.send("Error" + err);
+  }
+})
+
+app.get('/rain/bounds/:current_lat/:current_lon', async (req, res) => {
+  try {
+    let {
+      current_lat,
+      current_lon
+    } = req.params
+
+    let rain = tempDB.get("rain").filter((location) => {
+      let start = location.bounds.start_point;
+      let end = location.bounds.end_point;
+      return (current_lat <= start.latitude && current_lat >= end.latitude) && (current_lon >= start.longitude && current_lon <= end.longitude)
+    })
+
+    res.send({
+      count: rain.size().value(),
+      locations: rain
+    })
+  } catch (err) {
+    console.log(err);
+    res.send("Error" + err);
+  }
+})
+
+
 app.get("/incidents", (req, res) => {
   res.send(tempDB.get("incidents").value().reverse())
 })
