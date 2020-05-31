@@ -109,8 +109,17 @@ app.get("/incidents", (req, res) => {
   res.send(tempDB.get("incidents").value().reverse())
 })
 
+app.post("/incidents/add", (req, res) => {
+  const newReport = req.body;
+  newReport.status = "unverified";
+  newReport.uid = guid();
+  newReport.timestamp = Date.now();
+  tempDB.get("incidents").value().push(newReport);
+  res.send(newReport)
+})
+
 app.get("/incidentReport", (req, res) => {
-  tempDB.get("incidents").find({ uid: req.query.uid }).value();
+  res.send(tempDB.get("incidents").find({ uid: req.query.uid }).value()||[]);
 })
 
 app.get("/events", (req, res) => {
