@@ -109,6 +109,10 @@ app.get("/incidents", (req, res) => {
   res.send(tempDB.get("incidents").value().reverse())
 })
 
+app.get("/incidentReport", (req, res) => {
+  tempDB.get("incidents").find({ uid: req.query.uid }).value();
+})
+
 app.get("/events", (req, res) => {
 
 
