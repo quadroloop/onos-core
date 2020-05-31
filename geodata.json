@@ -1,5 +1,6 @@
 {
-	"rain": [{
+"incidents": [],	
+"rain": [{
 		"id": "polillo-island-quezon",
 		"place": "Polillo Island, Quezon",
 		"bounds": {
